@@ -355,8 +355,9 @@ section .button button:hover {
 
 .skills-details .boxes .per {
   font-size: 60px;
-  color: #4070f4;
+  color: #3e6df0;
 }
+
 
 /* My projects  CSS */
 
@@ -373,6 +374,7 @@ section .button button:hover {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    color:#4070f4;
     transition: transform 0.3s ease; 
 }
 
