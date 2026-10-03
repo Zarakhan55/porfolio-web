@@ -1,70 +1,117 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8" />
-  <title>Responsive Portfolio Website HTML CSS| CodingNepal</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Fontawesome CDN Link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zara Khan | Frontend Developer Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Portfolio.</a></div>
-      <ul class="menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-      </ul>
-      <div class="media-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Scroll To Top Button -->
+  <div class="scroll-button">
+    <a href="#home" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+
+  <!-- Navigation -->
+<nav>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#home">Zara<span>.</span></a>
     </div>
+
+    <ul class="menu">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+
+      <div class="cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+    </ul>
+
+    <div class="media-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- ✅ hamburger now INSIDE the navbar -->
     <div class="menu-btn">
       <i class="fas fa-bars"></i>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Home Section Start -->
+<!-- Overlay for mobile menu -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Home Section -->
   <section class="home" id="home">
     <div class="home-content">
       <div class="text">
-        <div class="text-one">Hello,</div>
-        <div class="text-two">I'm Zara khan</div>
-        <div class="text-three">Frontend Developer</div>
-        <div class="text-four">From Layri</div>
+        <div class="text-one reveal">Hello,</div>
+        <div class="text-two reveal">I'm Zara Khan</div>
+        <div class="text-three reveal">
+          <span class="typing"></span>
+        </div>
+        <div class="text-four reveal">From Layri</div>
       </div>
-      <div class="button">
-      <button>Hire Me</button>
+
+      <div class="button reveal">
+        <a href="#contact">
+          <button class="btn-3d">Hire Me</button>
+        </a>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="floating-card">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-bootstrap"></i>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section Start -->
+  <!-- About Section -->
   <section class="about" id="about">
     <div class="content">
-      <div class="title"><span>About Me</span></div>
+      <div class="title reveal"><span>About Me</span></div>
+
       <div class="about-details">
-        <div class="left">
-          <img src="aBOUT.jfif" alt="" />
+        <div class="left reveal">
+          <img src="aBOUT.jfif" alt="Zara Khan" />
         </div>
-        <div class="right">
+
+        <div class="right reveal">
           <div class="topic">Building Functional and Aesthetic Web Experiences</div>
           <p>
             I am a passionate Frontend Developer with a background in Information Technology and a strong foundation in modern web development. I specialize in building responsive, user-friendly, and visually engaging websites using HTML, CSS, JavaScript, and Bootstrap.
@@ -72,199 +119,183 @@
 Through academic projects and hands-on development, I have gained practical experience in creating clean interfaces, responsive layouts, and functional web experiences. I enjoy combining technical problem-solving with creative design to build websites that are both attractive and effective.
 
 I am continuously improving my skills, exploring modern frontend technologies, and working on real-world projects to grow as a professional developer. My goal is to contribute to meaningful projects, deliver high-quality web solutions, and continue developing into a skilled and reliable Frontend Developer.
-
           </p>
-          
+
           <div class="button">
             <a href="cv.pdf" download>
-              <button>Download CV</button>
+              <button class="btn-3d">Download CV</button>
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
 
-  <!-- My Skill Section Start -->
+  <!-- Skills Section -->
   <section class="skills" id="skills">
     <div class="content">
-        <div class="title"><span>My Skills</span></div>
-        <div class="skills-details">
-            <div class="text">
-                <div class="topic">Skills Reflect Our Knowledge</div>
-                <p>
-                    As a recent graduate and aspiring front-end developer, I have dedicated significant time to mastering essential web technologies. My hands-on projects and practice have equipped me with the foundational skills needed to create engaging and responsive web applications.
-                </p>
-                <div class="experience">
-                    <div class="num">0</div>
-                    <div class="exp">
-                        Years Of <br />
-                        Experience
-                    </div>
-                </div>
+      <div class="title reveal"><span>My Skills</span></div>
+
+      <div class="skills-details">
+        <div class="text reveal">
+          <div class="topic">Skills Reflect Our Knowledge</div>
+          <p>
+            As a recent graduate and aspiring front-end developer, I have dedicated significant time to mastering essential web technologies. My hands-on projects and practice have equipped me with the foundational skills needed to create engaging and responsive web applications.
+          </p>
+
+          <div class="experience">
+            <div class="num">0</div>
+            <div class="exp">
+              Years Of <br />
+              Experience
             </div>
-            <div class="boxes">
-                <div class="box">
-                    <div class="topic">HTML</div>
-                    <div class="per">90%</div>
-                </div>
-                <div class="box">
-                    <div class="topic">CSS</div>
-                    <div class="per">80%</div>
-                </div>
-                <div class="box">
-                    <div class="topic">JavaScript</div>
-                    <div class="per">50%</div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="boxes reveal">
+          <div class="box" data-tilt>
+            <div class="topic">HTML</div>
+            <div class="per">90%</div>
+            <div class="bar"><span data-per="90"></span></div>
+          </div>
+
+          <div class="box" data-tilt>
+            <div class="topic">CSS</div>
+            <div class="per">80%</div>
+            <div class="bar"><span data-per="80"></span></div>
+          </div>
+
+          <div class="box" data-tilt>
+            <div class="topic">JavaScript</div>
+            <div class="per">50%</div>
+            <div class="bar"><span data-per="50"></span></div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-
-  <!-- My Services Section Start -->
+  <!-- Projects Section -->
   <section class="projects" id="projects">
     <div class="content">
-        <div class="title"><span>My Projects</span></div>
-        
-        <div class="boxes">
+      <div class="title reveal"><span>My Projects</span></div>
 
-          <div class="box">
-    <a href="https://zarakhan55.github.io/Tic-TacToe/" target="_blank">
-        <img src="game.jfif" alt="Tic Tac Toe Game" />
-        <div class="topic">Tic Tac Toe Game</div>
-        <p>
-            A fun and interactive Tic Tac Toe game...
-        </p>
-    </a>
-</div>
-
-
-          <div class="box">
-              <a href=" https://zarakhan55.github.io/zaidcafe/" target="_blank">
-                <img src="cafe.jfif" alt="Cafe Website" />
-                <div class="topic">Responsive Cafe Website</div>
-                <p>
-                    A fully responsive cafe website designed to enhance user experience and showcase the menu, ambiance, and services offered. The website features an elegant layout, interactive elements, and smooth navigation, making it easy for customers to explore and place orders online.
-                </p>
-            </a>
-        </div>
-        
-        
-        <div class="box">
-          <a href="https://zarakhan55.github.io/khancosmatic/" target="_blank">
-              <img src="eCommerce.jfif" alt="Cosmetic E-commerce Website" />
-              <div class="topic">E-commerce Cosmetic Website</div>
-              <p>
-                  A visually appealing e-commerce platform designed for cosmetics, featuring a user-friendly interface, seamless navigation, and secure payment options. Customers can easily browse through a wide range of products, read reviews, and make purchases effortlessly.
-              </p>
+      <div class="boxes">
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/Tic-TacToe/" target="_blank">
+            <img src="game.jfif" alt="Tic Tac Toe Game" />
+            <div class="topic">Tic Tac Toe Game</div>
+            <p>
+              A fun and interactive Tic Tac Toe game that allows users to play against each other or the computer. The game features a clean interface, simple gameplay mechanics, and keeps track of wins and losses.
+            </p>
           </a>
-      </div>
-      
-      <div class="box">
-        <a href="https://zarakhan55.github.io/insta-clone/" target="_blank">
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/zaidcafe/" target="_blank">
+            <img src="cafe.jfif" alt="Cafe Website" />
+            <div class="topic">Responsive Cafe Website</div>
+            <p>
+              A fully responsive cafe website designed to enhance user experience and showcase the menu, ambiance, and services offered.
+            </p>
+          </a>
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/khancosmatic/" target="_blank">
+            <img src="eCommerce.jfif" alt="Cosmetic E-commerce Website" />
+            <div class="topic">E-commerce Cosmetic Website</div>
+            <p>
+              A visually appealing e-commerce platform designed for cosmetics, featuring a user-friendly interface, seamless navigation, and secure payment options.
+            </p>
+          </a>
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/insta-clone/" target="_blank">
             <img src="insta.jfif" alt="Instagram Clone" />
             <div class="topic">Responsive Instagram Clone</div>
             <p>
-                A fully responsive Instagram clone designed to replicate the core features of the popular social media platform. Users can create accounts, upload images, follow friends, and like or comment on posts, all with a sleek and intuitive interface.
+              A fully responsive Instagram clone designed to replicate the core features of the popular social media platform.
             </p>
-        </a>
-    </div>
-    
-    <div class="box">
-      <a href="https://zarakhan55.github.io/Amazonclone/" target="_blank">
-          <img src="amazon.jfif" alt="Amazon Clone" />
-          <div class="topic">Amazon Clone</div>
-          <p>
-              An e-commerce platform that mimics the features of Amazon, allowing users to browse a vast selection of products, add items to their cart, and complete purchases. The site includes user reviews, ratings, and secure payment options, all designed for a seamless shopping experience.
-          </p>
-      </a>
-  </div>
-  
-  <div class="box">
-    <a href=" https://zarakhan55.github.io/furniture/" target="_blank">
-        <img src="furniture.jfif" alt="Furniture Website" />
-        <div class="topic">Furniture E-commerce Website</div>
-        <p>
-            An online furniture store designed to showcase a variety of stylish and functional furniture pieces. Users can easily browse collections, view product details, and make secure purchases, all within an intuitive and user-friendly interface.
-        </p>
-    </a>
-</div>
-
-<div class="box">
-  <a href="https://zarakhan55.github.io/Tic-TacToe/" target="_blank">
-      <img src="game.jfif" alt="Tic Tac Toe Game" />
-      <div class="topic">Tic Tac Toe Game</div>
-      <p>
-          A fun and interactive Tic Tac Toe game that allows users to play against each other or the computer. The game features a clean interface, simple gameplay mechanics, and keeps track of wins and losses for a competitive experience.
-      </p>
-  </a>
-</div>
-          <div class="box">
-
-    <a href="
-https://zarakhan55.github.io/Website-learning/" target="_blank">
-
-        <img src="laerning.png" alt="Learning Website">
-
-        <div class="topic">Learning Website</div>
-
-        <p>
-            A responsive online learning website designed to provide
-            students with an easy and modern platform to explore
-            courses and educational content.
-        </p>
-
-    </a>
-
-</div>
-<div class="box">
-    <a href="https://zarakhan55.github.io/SMIT-clone/" target="_blank">
-        <img src="smit.png" alt="SMIT Clone Website" />
-        <div class="topic">SMIT Website Clone</div>
-        <p>
-            A responsive clone of the SMIT website built using HTML, CSS,
-            and Bootstrap. The project focuses on creating a clean layout,
-            responsive navigation, course sections, and a user-friendly
-            interface inspired by the original website.
-        </p>
-    </a>
-</div>
-
+          </a>
         </div>
-    </div>
-</section>
 
-  <!-- Contact Me section Start -->
-  <section class="contact" id="contact">
-    <div class="content">
-      <div class="title"><span>Contact Me</span></div>
-      <div class="text">
-        <div class="topic">Do You Have Any Projects?</div>
-        <p>
-          As a front-end developer, I am passionate about creating innovative and user-friendly web applications. My projects demonstrate my skills in HTML, CSS, JavaScript, and frameworks like Bootstrap. Each project reflects my commitment to quality and attention to detail, ensuring an optimal user experience. I would love to discuss my work with you!
-        </p>
-        
-        <div class="button">
-          <a href="https://wa.me/923112402203" target="_blank">
-            <button>Let's Chat</button>
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/Amazonclone/" target="_blank">
+            <img src="amazon.jfif" alt="Amazon Clone" />
+            <div class="topic">Amazon Clone</div>
+            <p>
+              An e-commerce platform that mimics the features of Amazon, allowing users to browse products, add items to cart, and complete purchases.
+            </p>
+          </a>
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/furniture/" target="_blank">
+            <img src="furniture.jfif" alt="Furniture Website" />
+            <div class="topic">Furniture E-commerce Website</div>
+            <p>
+              An online furniture store designed to showcase stylish and functional furniture pieces with a user-friendly interface.
+            </p>
+          </a>
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/Website-learning/" target="_blank">
+            <img src="laerning.png" alt="Learning Website" />
+            <div class="topic">Learning Website</div>
+            <p>
+              A responsive online learning website designed to provide students with an easy and modern platform to explore courses and educational content.
+            </p>
+          </a>
+        </div>
+
+        <div class="box" data-tilt>
+          <a href="https://zarakhan55.github.io/SMIT-clone/" target="_blank">
+            <img src="smit.png" alt="SMIT Clone Website" />
+            <div class="topic">SMIT Website Clone</div>
+            <p>
+              A responsive clone of the SMIT website built using HTML, CSS, and Bootstrap. The project focuses on clean layout, responsive navigation, and course sections.
+            </p>
           </a>
         </div>
       </div>
     </div>
   </section>
-  
-  
 
-  <!-- Footer Section Start -->
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title reveal"><span>Contact Me</span></div>
+
+      <div class="text reveal">
+        <div class="topic">Do You Have Any Projects?</div>
+        <p>
+          As a front-end developer, I am passionate about creating innovative and user-friendly web applications. My projects demonstrate my skills in HTML, CSS, JavaScript, and frameworks like Bootstrap. Each project reflects my commitment to quality and attention to detail. I would love to discuss my work with you!
+        </p>
+
+        <div class="button">
+          <a href="https://wa.me/923112402203" target="_blank">
+            <button class="btn-3d">Let's Chat</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div class="text">
-      <span>Created By <a href="https://www.linkedin.com/in/zara-khan-687244302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Zara khan</a> | &#169; 2021 All Rights Reserved</span>
+      <span>
+        Created By
+        <a href="https://www.linkedin.com/in/zara-khan-687244302" target="_blank">Zara Khan</a>
+        | &#169; 2026 All Rights Reserved
+      </span>
     </div>
   </footer>
 
+  <!-- Main JS -->
   <script src="script.js"></script>
 </body>
-
 </html>
