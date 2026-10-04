@@ -238,7 +238,6 @@ nav.sticky {
 
 /* ===============================
    HAMBURGER + CLOSE BUTTONS
-   (default hidden on desktop)
 =============================== */
 .menu-btn,
 .cancel-btn {
@@ -248,8 +247,6 @@ nav.sticky {
   cursor: pointer;
 }
 
-/* Hamburger — absolutely positioned top-right of nav
-   (because it sits OUTSIDE .navbar in the HTML) */
 .menu-btn {
   position: absolute;
   top: 50%;
@@ -257,7 +254,7 @@ nav.sticky {
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
-  display: none;                /* becomes grid on mobile */
+  display: none;              
   place-items: center;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.85);
@@ -553,17 +550,23 @@ section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 18px;
 }
 
 .skills-details .box {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 22px 24px;
+  padding: 18px 22px;
   transition: 0.35s;
   transform-style: preserve-3d;
   box-shadow: var(--shadow-sm);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 12px;
 }
 .skills-details .box:hover {
   box-shadow: 0 24px 50px -18px rgba(67, 56, 202, 0.35);
@@ -571,26 +574,69 @@ section {
   transform: translateY(-4px);
 }
 
-.skills-details .box .topic {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text);
-}
-.skills-details .box .per {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--primary);
-  text-align: right;
-  margin-top: -26px;
+/* Icon circle */
+.skills-details .box .icon {
+  grid-column: 1;
+  grid-row: 1;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  color: #fff;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 20px -10px rgba(20, 23, 43, 0.35);
 }
 
-.bar {
+.skills-details .box .icon.html {
+  background: linear-gradient(135deg, #e34f26, #f06529);
+}
+.skills-details .box .icon.css {
+  background: linear-gradient(135deg, #264de4, #2965f1);
+}
+.skills-details .box .icon.js {
+  background: linear-gradient(135deg, #f0b400, #f7df1e);
+  color: #14172b;      }
+.skills-details .box .icon.bootstrap {
+  background: linear-gradient(135deg, #7952b3, #9a6fd1);
+}
+.skills-details .box .icon.github {
+  background: linear-gradient(135deg, #181717, #4a4a4a);
+}
+
+.skills-details .box:hover .icon {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+.skills-details .box .topic {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Percentage */
+.skills-details .box .per {
+  grid-column: 3;
+  grid-row: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: right;
+  margin: 0;
+}
+
+.skills-details .box .bar {
+  grid-column: 1 / -1;
+  grid-row: 2;
   width: 100%;
   height: 8px;
   background: var(--bg-soft);
   border-radius: 10px;
-  margin-top: 14px;
+  margin: 0;
   overflow: hidden;
 }
 .bar span {
@@ -796,7 +842,6 @@ footer .text a {
   }
   .menu.active { right: 0; }
 
-  /* ✅ Show hamburger (absolute top-right) + close button */
   .menu-btn {
     display: grid;
     top: 22px;
