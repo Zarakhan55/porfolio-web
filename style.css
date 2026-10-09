@@ -492,6 +492,87 @@ section {
   white-space: pre-line;
   font-size: 15px;
 }
+/* Image wrapper for positioning tags */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.img-wrapper img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Base style for tech tags */
+.tech-tag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #ffffff;
+  color: #222;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  animation: float 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+.tech-tag i {
+  font-size: 15px;
+}
+
+/* Individual tag colors + positions */
+.tag-html {
+  top: -10px;
+  left: -30px;
+  color: #e34f26;
+  animation-delay: 0s;
+}
+
+.tag-css {
+  top: 25%;
+  right: -40px;
+  color: #1572b6;
+  animation-delay: 0.5s;
+}
+
+.tag-js {
+  bottom: 30%;
+  left: -40px;
+  color: #f7df1e;
+  background: #222;
+  animation-delay: 1s;
+}
+
+.tag-github {
+  bottom: -10px;
+  right: -20px;
+  color: #333;
+  animation-delay: 1.5s;
+}
+
+.tag-bootstrap {
+  top: 55%;
+  right: -50px;
+  color: #7952b3;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 
 /* ===============================
    SKILLS
@@ -899,4 +980,15 @@ footer .text a {
   .floating-card i { font-size: 28px; }
 
   section { padding: 90px 20px; }
+}
+@media (max-width: 768px) {
+  .tech-tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  .tag-html   { left: -10px; }
+  .tag-css    { right: -15px; }
+  .tag-js     { left: -15px; }
+  .tag-github { right: -10px; }
+  .tag-bootstrap { right: -20px; }
 }
